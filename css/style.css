@@ -240,36 +240,25 @@
       }
     }
 
-/* Ajustes extras para celular */
+/* Garante que imagens dentro das matérias nunca estourem a tela */
+.manchete img,
+.mancheteprofissões img,
+.subtitulo img,
+.imagem2 img,
+.imagem3 img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Força o aside a virar bloco no celular */
 @media (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
+  main {
+    grid-template-columns: 1fr; /* força 1 coluna */
   }
 
-  header {
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header nav {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-
-  .imagem2 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imagem2 img,
-  .imagem3 img {
-    width: 100% !important;  /* força imagem a caber */
-    height: auto;
+  aside {
+    grid-column: 1 / 2 !important; /* ocupa linha inteira */
+    width: 100%;
+    margin-top: 20px;
   }
 }
