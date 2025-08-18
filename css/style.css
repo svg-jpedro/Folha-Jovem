@@ -1,4 +1,4 @@
-   /* Paleta de cores: Roxo escuro, lilás, branco e cinza claro */
+/* Paleta de cores: Roxo escuro, lilás, branco e cinza claro */
     :root {
       --roxo-escuro: #3a0ca3;
       --roxo-medio: #720026;
@@ -239,3 +239,37 @@
         margin-top: 25px;
       }
     }
+
+/* Ajustes extras para celular */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header nav {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .imagem2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem2 img,
+  .imagem3 img {
+    width: 100% !important;  /* força imagem a caber */
+    height: auto;
+  }
+}
